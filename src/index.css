@@ -15,44 +15,46 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 12%;
 
-    --primary: 220 80% 35%;
+    --primary: 215 41% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 96%;
-    --secondary-foreground: 220 25% 12%;
+    --secondary: 215 20% 95%;
+    --secondary-foreground: 215 25% 20%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 10% 50%;
 
-    --accent: 210 100% 45%;
+    --accent: 215 41% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 80% 35%;
+    --border: 210 18% 87%;
+    --input: 210 18% 87%;
+    --ring: 215 41% 48%;
 
     --radius: 0.75rem;
 
-    --moscow-blue: #0047ab;
-    --moscow-blue-dark: #003380;
-    --moscow-blue-light: #1565c0;
-    --moscow-accent: #e8f0fe;
-    --moscow-gold: #c5a028;
+    /* Точные цвета с сайта parking.mos.ru / ГКУ АМПП */
+    --moscow-blue: #486daa;
+    --moscow-blue-dark: #335a93;
+    --moscow-blue-light: #5a7fba;
+    --moscow-accent: #eef2f8;
+    --moscow-steel: #3a5a8c;
     --moscow-text: #1a1f36;
     --moscow-gray: #6b7280;
-    --moscow-border: #e2e8f0;
+    --moscow-border: #dadde0;
+    --moscow-date: #486daa;
 
-    --sidebar-background: 220 40% 22%;
+    --sidebar-background: 215 35% 25%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 210 100% 55%;
+    --sidebar-primary: 215 41% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 40% 30%;
+    --sidebar-accent: 215 35% 33%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 40% 30%;
-    --sidebar-ring: 210 100% 55%;
+    --sidebar-border: 215 35% 33%;
+    --sidebar-ring: 215 41% 58%;
   }
 }
 
@@ -86,11 +88,11 @@
   }
 
   .moscow-gradient {
-    background: linear-gradient(135deg, #0047ab 0%, #1565c0 50%, #0d47a1 100%);
+    background: linear-gradient(135deg, #486daa 0%, #5a7fba 50%, #3a5a8c 100%);
   }
 
   .moscow-gradient-subtle {
-    background: linear-gradient(180deg, #e8f0fe 0%, #f8faff 100%);
+    background: linear-gradient(180deg, #eef2f8 0%, #f8faff 100%);
   }
 
   .text-moscow-blue {
@@ -108,7 +110,7 @@
   }
   .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 71, 171, 0.15);
+    box-shadow: 0 20px 40px rgba(72, 109, 170, 0.18);
   }
 
   .animate-fade-in {
@@ -159,22 +161,22 @@
   }
 
   .btn-moscow {
-    background: linear-gradient(135deg, #0047ab, #1565c0);
+    background: linear-gradient(135deg, #486daa, #5a7fba);
     color: white;
     border: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3);
+    box-shadow: 0 4px 15px rgba(72, 109, 170, 0.3);
   }
   .btn-moscow:hover {
-    background: linear-gradient(135deg, #003380, #0047ab);
-    box-shadow: 0 6px 20px rgba(0, 71, 171, 0.45);
+    background: linear-gradient(135deg, #335a93, #486daa);
+    box-shadow: 0 6px 20px rgba(72, 109, 170, 0.45);
     transform: translateY(-1px);
   }
 
   .section-divider {
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #0047ab, #1565c0);
+    background: linear-gradient(90deg, #486daa, #5a7fba);
     border-radius: 2px;
   }
 

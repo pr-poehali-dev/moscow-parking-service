@@ -68,11 +68,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				moscow: {
-					blue: '#0047AB',
-					dark: '#003380',
-					light: '#1565C0',
-					accent: '#E8F0FE',
-					gold: '#C5A028',
+					blue: '#486DAA',
+					dark: '#335a93',
+					light: '#5a7fba',
+					steel: '#3a5a8c',
+					accent: '#EEF2F8',
+					border: '#DADDE0',
 					text: '#1A1F36',
 					gray: '#6B7280',
 				}

@@ -27,7 +27,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'shadow-lg bg-[#0047AB]' : 'bg-[#0047AB]'
+        scrolled ? 'shadow-lg bg-[#486DAA]' : 'bg-[#486DAA]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +37,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             className="flex items-center gap-3 group"
           >
             <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-[#0047AB] font-montserrat font-black text-sm">М</span>
+              <span className="text-[#486DAA] font-montserrat font-black text-sm">М</span>
             </div>
             <div className="text-left">
               <div className="text-white font-montserrat font-bold text-sm leading-tight">Парковочный юрист</div>
@@ -64,7 +64,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
           <div className="flex items-center gap-3">
             <button
               onClick={() => onNavigate('complaint')}
-              className="hidden md:flex items-center gap-2 bg-white text-[#0047AB] px-4 py-2 rounded-lg text-sm font-semibold font-montserrat hover:bg-blue-50 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="hidden md:flex items-center gap-2 bg-white text-[#486DAA] px-4 py-2 rounded-lg text-sm font-semibold font-montserrat hover:bg-blue-50 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <Icon name="FileText" size={16} />
               Составить жалобу
@@ -87,7 +87,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#003380] border-t border-white/10 animate-fade-in">
+        <div className="md:hidden bg-[#335a93] border-t border-white/10 animate-fade-in">
           <div className="px-4 py-3 flex flex-col gap-1">
             {navItems.map((item) => (
               <button
@@ -105,7 +105,7 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <div className="mt-2 pt-2 border-t border-white/10 flex flex-col gap-2">
               <button
                 onClick={() => { onNavigate('complaint'); setMenuOpen(false); }}
-                className="w-full bg-white text-[#0047AB] px-4 py-3 rounded-lg text-sm font-semibold font-montserrat"
+                className="w-full bg-white text-[#486DAA] px-4 py-3 rounded-lg text-sm font-semibold font-montserrat"
               >
                 Составить жалобу
               </button>

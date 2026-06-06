@@ -72,7 +72,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
       <div className="min-h-screen bg-gray-50 pt-16 flex items-center justify-center px-4">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-[#0047AB] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-[#486DAA] rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Icon name="User" size={28} className="text-white" />
             </div>
             <h1 className="font-montserrat font-bold text-2xl text-[#1A1F36]">Личный кабинет</h1>
@@ -87,7 +87,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] transition-all"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] transition-all"
                   placeholder="Введите email"
                 />
               </div>
@@ -98,7 +98,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] transition-all"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] transition-all"
                   placeholder="Введите пароль"
                 />
               </div>
@@ -110,7 +110,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
               <p className="text-gray-500 text-sm mb-3">Ещё нет аккаунта?</p>
               <button
                 onClick={() => onNavigate('complaint')}
-                className="text-[#0047AB] font-semibold text-sm hover:underline"
+                className="text-[#486DAA] font-semibold text-sm hover:underline"
               >
                 Составить жалобу — аккаунт создастся автоматически
               </button>
@@ -135,7 +135,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-[#0047AB] rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#486DAA] rounded-lg flex items-center justify-center">
                 <Icon name="User" size={16} className="text-white" />
               </div>
               <div>
@@ -209,7 +209,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                     key={c.id}
                     onClick={() => setSelectedComplaint(c)}
                     className={`p-5 cursor-pointer hover:bg-gray-50 transition-colors ${
-                      selectedComplaint?.id === c.id ? 'bg-[#E8F0FE]' : ''
+                      selectedComplaint?.id === c.id ? 'bg-[#EEF2F8]' : ''
                     }`}
                   >
                     <div className="flex items-start justify-between mb-2">
@@ -223,7 +223,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                     </div>
                     <div className="flex items-center gap-4 text-xs text-gray-400">
                       <span>{c.date}</span>
-                      <span className="font-montserrat font-semibold text-[#0047AB]">{c.amount}</span>
+                      <span className="font-montserrat font-semibold text-[#486DAA]">{c.amount}</span>
                       {c.messages > 0 && (
                         <span className="flex items-center gap-1">
                           <Icon name="MessageCircle" size={12} />
@@ -267,15 +267,15 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
 
                   {/* Complaint document (admin attaches) */}
                   {role !== 'user' && (
-                    <div className="mb-5 p-4 bg-[#E8F0FE] rounded-xl flex items-center justify-between">
+                    <div className="mb-5 p-4 bg-[#EEF2F8] rounded-xl flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <Icon name="FileText" size={20} className="text-[#0047AB]" />
+                        <Icon name="FileText" size={20} className="text-[#486DAA]" />
                         <div>
-                          <div className="text-sm font-semibold text-[#0047AB]">Прикрепить готовую жалобу</div>
+                          <div className="text-sm font-semibold text-[#486DAA]">Прикрепить готовую жалобу</div>
                           <div className="text-xs text-blue-400">Документ увидит клиент</div>
                         </div>
                       </div>
-                      <label className="cursor-pointer bg-[#0047AB] text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-[#003380] transition-colors">
+                      <label className="cursor-pointer bg-[#486DAA] text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-[#335a93] transition-colors">
                         <input type="file" className="hidden" />
                         Загрузить
                       </label>
@@ -305,10 +305,10 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                     </div>
                     <div className="p-4 space-y-3 min-h-[120px] max-h-[200px] overflow-y-auto">
                       <div className="flex gap-3">
-                        <div className="w-7 h-7 bg-[#0047AB] rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-7 h-7 bg-[#486DAA] rounded-full flex items-center justify-center flex-shrink-0">
                           <Icon name="User" size={14} className="text-white" />
                         </div>
-                        <div className="bg-[#E8F0FE] rounded-xl rounded-tl-none px-4 py-2.5 max-w-xs">
+                        <div className="bg-[#EEF2F8] rounded-xl rounded-tl-none px-4 py-2.5 max-w-xs">
                           <p className="text-sm text-[#1A1F36]">Добрый день! Прикладываю фото места стоянки.</p>
                           <p className="text-xs text-gray-400 mt-1">14:22</p>
                         </div>
@@ -328,10 +328,10 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                         type="text"
                         value={chatMessage}
                         onChange={(e) => setChatMessage(e.target.value)}
-                        className="flex-1 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] transition-all"
+                        className="flex-1 border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] transition-all"
                         placeholder="Написать сообщение..."
                       />
-                      <button className="w-9 h-9 bg-[#0047AB] rounded-xl flex items-center justify-center hover:bg-[#003380] transition-colors flex-shrink-0">
+                      <button className="w-9 h-9 bg-[#486DAA] rounded-xl flex items-center justify-center hover:bg-[#335a93] transition-colors flex-shrink-0">
                         <Icon name="Send" size={16} className="text-white" />
                       </button>
                     </div>
@@ -367,7 +367,7 @@ export default function CabinetPage({ onNavigate }: { onNavigate: (page: string)
                       <td className="px-5 py-4 text-xs text-gray-400 font-mono">{user.id}</td>
                       <td className="px-5 py-4 text-sm font-medium text-[#1A1F36]">{user.name}</td>
                       <td className="px-5 py-4 text-sm text-gray-500">{user.email}</td>
-                      <td className="px-5 py-4 text-sm text-[#0047AB] font-semibold">{user.count}</td>
+                      <td className="px-5 py-4 text-sm text-[#486DAA] font-semibold">{user.count}</td>
                       <td className="px-5 py-4 text-sm text-gray-500">{user.date}</td>
                       <td className="px-5 py-4">
                         <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{user.role}</span>

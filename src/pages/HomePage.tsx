@@ -63,7 +63,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animate-stagger-3">
                 <button
                   onClick={() => onNavigate('complaint')}
-                  className="flex items-center justify-center gap-2 bg-white text-[#0047AB] px-8 py-4 rounded-xl text-base font-bold font-montserrat hover:bg-yellow-50 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                  className="flex items-center justify-center gap-2 bg-white text-[#486DAA] px-8 py-4 rounded-xl text-base font-bold font-montserrat hover:bg-yellow-50 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-1"
                 >
                   <Icon name="FileText" size={20} />
                   Составить жалобу
@@ -118,7 +118,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 Обо мне
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                Меня зовут <strong className="text-[#0047AB]">Александр Петров</strong> — юрист с 7-летней специализацией 
+                Меня зовут <strong className="text-[#486DAA]">Александр Петров</strong> — юрист с 7-летней специализацией 
                 в области административного права и дорожного законодательства Москвы.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -132,14 +132,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </p>
               <div className="flex flex-wrap gap-3">
                 {['КоАП РФ', 'Административное право', 'Суды Москвы', 'МАДИ', 'АМПП'].map((tag) => (
-                  <span key={tag} className="bg-[#E8F0FE] text-[#0047AB] px-4 py-2 rounded-full text-sm font-medium">
+                  <span key={tag} className="bg-[#EEF2F8] text-[#486DAA] px-4 py-2 rounded-full text-sm font-medium">
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-[#E8F0FE] to-[#F0F4FF] rounded-3xl p-8">
+              <div className="bg-gradient-to-br from-[#EEF2F8] to-[#F0F4FF] rounded-3xl p-8">
                 <div className="grid grid-cols-1 gap-4">
                   {[
                     { icon: 'GraduationCap', title: 'Образование', desc: 'МГЮА им. Кутафина, специальность «Юриспруденция»' },
@@ -148,7 +148,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     { icon: 'Shield', title: 'Гарантия', desc: 'Оплата только после положительного решения' },
                   ].map((item) => (
                     <div key={item.icon} className="flex items-start gap-4 bg-white rounded-xl p-4 shadow-sm">
-                      <div className="w-10 h-10 bg-[#0047AB] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-[#486DAA] rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon name={item.icon} size={20} className="text-white" />
                       </div>
                       <div>
@@ -182,12 +182,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 key={i}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover group"
               >
-                <div className="w-12 h-12 bg-[#E8F0FE] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#0047AB] transition-colors duration-300">
-                  <Icon name={s.icon} size={24} className="text-[#0047AB] group-hover:text-white transition-colors duration-300" />
+                <div className="w-12 h-12 bg-[#EEF2F8] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#486DAA] transition-colors duration-300">
+                  <Icon name={s.icon} size={24} className="text-[#486DAA] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="font-montserrat font-semibold text-[#1A1F36] text-base mb-3">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.desc}</p>
-                <div className="font-montserrat font-bold text-[#0047AB]">{s.price}</div>
+                <div className="font-montserrat font-bold text-[#486DAA]">{s.price}</div>
               </div>
             ))}
           </div>
@@ -213,12 +213,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             ].map((step, i) => (
               <div key={i} className="relative flex flex-col items-center text-center">
                 {i < 4 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-[#0047AB] to-[#1565C0] opacity-20 z-0"></div>
+                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-[#486DAA] to-[#5a7fba] opacity-20 z-0"></div>
                 )}
-                <div className="relative z-10 w-16 h-16 bg-[#0047AB] rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+                <div className="relative z-10 w-16 h-16 bg-[#486DAA] rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                   <Icon name={step.icon} size={28} className="text-white" />
                 </div>
-                <div className="font-montserrat font-black text-xs text-[#0047AB] opacity-40 mb-1">{step.n}</div>
+                <div className="font-montserrat font-black text-xs text-[#486DAA] opacity-40 mb-1">{step.n}</div>
                 <h4 className="font-montserrat font-semibold text-[#1A1F36] text-sm mb-2">{step.title}</h4>
                 <p className="text-gray-400 text-xs leading-relaxed">{step.desc}</p>
               </div>
@@ -239,7 +239,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => onNavigate('complaint')}
-              className="flex items-center justify-center gap-2 bg-white text-[#0047AB] px-8 py-4 rounded-xl text-base font-bold font-montserrat hover:bg-yellow-50 transition-all shadow-xl hover:-translate-y-1"
+              className="flex items-center justify-center gap-2 bg-white text-[#486DAA] px-8 py-4 rounded-xl text-base font-bold font-montserrat hover:bg-yellow-50 transition-all shadow-xl hover:-translate-y-1"
             >
               <Icon name="FileText" size={20} />
               Составить жалобу онлайн

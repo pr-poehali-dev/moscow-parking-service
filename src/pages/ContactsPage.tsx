@@ -43,8 +43,8 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
                 { icon: 'MapPin', label: 'Адрес', value: 'г. Москва', sub: 'Встречи по предварительной записи' },
               ].map((item) => (
                 <div key={item.icon} className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
-                  <div className="w-11 h-11 bg-[#E8F0FE] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon} size={20} className="text-[#0047AB]" />
+                  <div className="w-11 h-11 bg-[#EEF2F8] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name={item.icon} size={20} className="text-[#486DAA]" />
                   </div>
                   <div>
                     <div className="text-xs text-gray-400 mb-0.5">{item.label}</div>
@@ -55,14 +55,14 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-[#0047AB] to-[#1565C0] rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-[#486DAA] to-[#5a7fba] rounded-2xl p-6 text-white">
               <h3 className="font-montserrat font-bold text-lg mb-2">Нужна срочная помощь?</h3>
               <p className="text-blue-100 text-sm mb-4 leading-relaxed">
                 Помните: срок обжалования — 10 дней с момента получения постановления. Не упустите время!
               </p>
               <button
                 onClick={() => onNavigate('complaint')}
-                className="flex items-center gap-2 bg-white text-[#0047AB] px-5 py-3 rounded-xl text-sm font-bold font-montserrat hover:bg-yellow-50 transition-all"
+                className="flex items-center gap-2 bg-white text-[#486DAA] px-5 py-3 rounded-xl text-sm font-bold font-montserrat hover:bg-yellow-50 transition-all"
               >
                 <Icon name="FileText" size={16} />
                 Составить жалобу сейчас
@@ -97,7 +97,7 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                       placeholder="Иван Иванович"
                     />
                   </div>
@@ -109,7 +109,7 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
                         required
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                         placeholder="+7 (999) 000-00-00"
                       />
                     </div>
@@ -119,7 +119,7 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
                         type="email"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                         placeholder="mail@example.com"
                       />
                     </div>
@@ -130,7 +130,7 @@ export default function ContactsPage({ onNavigate }: { onNavigate: (page: string
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       rows={4}
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all resize-none"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all resize-none"
                       placeholder="Опишите вашу ситуацию..."
                     />
                   </div>

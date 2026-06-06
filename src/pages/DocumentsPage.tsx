@@ -114,13 +114,13 @@ export default function DocumentsPage() {
       </div>
 
       {/* Info banner */}
-      <div className="bg-[#E8F0FE] border-b border-blue-100">
+      <div className="bg-[#EEF2F8] border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-start gap-3">
-            <Icon name="Info" size={18} className="text-[#0047AB] flex-shrink-0 mt-0.5" />
-            <p className="text-[#0047AB] text-sm">
+            <Icon name="Info" size={18} className="text-[#486DAA] flex-shrink-0 mt-0.5" />
+            <p className="text-[#486DAA] text-sm">
               Все шаблоны доступны для бесплатного скачивания. Заполните документ самостоятельно или{' '}
-              <button className="underline font-semibold hover:text-[#003380]">
+              <button className="underline font-semibold hover:text-[#335a93]">
                 закажите профессиональную подготовку жалобы
               </button>
               .
@@ -138,7 +138,7 @@ export default function DocumentsPage() {
               onClick={() => setFilter(cat.id)}
               className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === cat.id
-                  ? 'bg-[#0047AB] text-white shadow-md'
+                  ? 'bg-[#486DAA] text-white shadow-md'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -163,8 +163,8 @@ export default function DocumentsPage() {
                   </span>
                   <span className="text-xs text-gray-400 font-medium bg-gray-100 px-2 py-1 rounded">{doc.format}</span>
                 </div>
-                <div className="w-10 h-10 bg-[#E8F0FE] rounded-xl flex items-center justify-center mb-4">
-                  <Icon name="FileText" size={22} className="text-[#0047AB]" />
+                <div className="w-10 h-10 bg-[#EEF2F8] rounded-xl flex items-center justify-center mb-4">
+                  <Icon name="FileText" size={22} className="text-[#486DAA]" />
                 </div>
                 <h3 className="font-montserrat font-semibold text-[#1A1F36] text-sm leading-snug mb-3">{doc.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{doc.desc}</p>

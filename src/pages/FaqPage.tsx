@@ -78,7 +78,7 @@ export default function FaqPage({ onNavigate }: { onNavigate: (page: string) => 
                 <span className="font-montserrat font-semibold text-[#1A1F36] text-sm leading-snug">{faq.q}</span>
                 <div
                   className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-                    open === i ? 'bg-[#0047AB] rotate-180' : 'bg-gray-100'
+                    open === i ? 'bg-[#486DAA] rotate-180' : 'bg-gray-100'
                   }`}
                 >
                   <Icon
@@ -99,7 +99,7 @@ export default function FaqPage({ onNavigate }: { onNavigate: (page: string) => 
         </div>
 
         {/* CTA */}
-        <div className="mt-12 bg-gradient-to-br from-[#0047AB] to-[#1565C0] rounded-3xl p-8 text-center">
+        <div className="mt-12 bg-gradient-to-br from-[#486DAA] to-[#5a7fba] rounded-3xl p-8 text-center">
           <Icon name="MessageCircle" size={40} className="text-white/60 mx-auto mb-4" />
           <h3 className="font-montserrat font-bold text-xl text-white mb-3">
             Не нашли ответ?
@@ -110,7 +110,7 @@ export default function FaqPage({ onNavigate }: { onNavigate: (page: string) => 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
               onClick={() => onNavigate('complaint')}
-              className="flex items-center justify-center gap-2 bg-white text-[#0047AB] px-6 py-3 rounded-xl text-sm font-bold font-montserrat hover:bg-yellow-50 transition-all"
+              className="flex items-center justify-center gap-2 bg-white text-[#486DAA] px-6 py-3 rounded-xl text-sm font-bold font-montserrat hover:bg-yellow-50 transition-all"
             >
               <Icon name="FileText" size={16} />
               Составить жалобу

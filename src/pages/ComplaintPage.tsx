@@ -34,7 +34,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
           <p className="text-gray-500 mb-2">
             Карточка жалобы создана. Доступ в личный кабинет отправлен на почту:
           </p>
-          <p className="font-semibold text-[#0047AB] mb-6">{form.email}</p>
+          <p className="font-semibold text-[#486DAA] mb-6">{form.email}</p>
           <p className="text-gray-400 text-sm mb-8">
             Юрист приступит к работе в течение 1 рабочего дня и свяжется с вами через личный кабинет.
           </p>
@@ -78,15 +78,15 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
               <div key={s} className="flex items-center gap-2 flex-1">
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold font-montserrat transition-all ${
-                    step >= s ? 'bg-[#0047AB] text-white' : 'bg-gray-100 text-gray-400'
+                    step >= s ? 'bg-[#486DAA] text-white' : 'bg-gray-100 text-gray-400'
                   }`}
                 >
                   {step > s ? <Icon name="Check" size={14} /> : s}
                 </div>
-                <span className={`text-xs font-medium hidden sm:block ${step >= s ? 'text-[#0047AB]' : 'text-gray-400'}`}>
+                <span className={`text-xs font-medium hidden sm:block ${step >= s ? 'text-[#486DAA]' : 'text-gray-400'}`}>
                   {s === 1 ? 'Данные жалобы' : s === 2 ? 'Регистрация' : 'Оплата'}
                 </span>
-                {s < 3 && <div className={`flex-1 h-0.5 ${step > s ? 'bg-[#0047AB]' : 'bg-gray-200'}`}></div>}
+                {s < 3 && <div className={`flex-1 h-0.5 ${step > s ? 'bg-[#486DAA]' : 'bg-gray-200'}`}></div>}
               </div>
             ))}
           </div>
@@ -112,7 +112,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                       type="text"
                       value={form[f.field as keyof typeof form] as string}
                       onChange={(e) => updateForm(f.field, e.target.value)}
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                       placeholder={f.placeholder}
                     />
                   </div>
@@ -126,7 +126,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                     type="text"
                     value={form.decreeNumber}
                     onChange={(e) => updateForm('decreeNumber', e.target.value)}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                     placeholder="77 АА 000000000"
                   />
                 </div>
@@ -136,7 +136,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                     type="date"
                     value={form.decreeDate}
                     onChange={(e) => updateForm('decreeDate', e.target.value)}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                   rows={4}
                   value={form.situation}
                   onChange={(e) => updateForm('situation', e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all resize-none"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all resize-none"
                   placeholder="Где, когда и при каких обстоятельствах был выписан штраф? Какие знаки присутствовали? Есть ли особые обстоятельства?"
                 />
               </div>
@@ -158,7 +158,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                     Копия постановления
                     <span className="text-gray-400 font-normal ml-1">(при наличии)</span>
                   </label>
-                  <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-[#0047AB] hover:bg-[#E8F0FE]/30 transition-all">
+                  <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-[#486DAA] hover:bg-[#EEF2F8]/30 transition-all">
                     <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="hidden" onChange={handleFile('decreeFile')} />
                     {form.decreeFile ? (
                       <div className="text-center p-3">
@@ -178,7 +178,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                     Копия СТС
                     <span className="text-gray-400 font-normal ml-1">(при наличии)</span>
                   </label>
-                  <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-[#0047AB] hover:bg-[#E8F0FE]/30 transition-all">
+                  <label className="flex flex-col items-center justify-center w-full h-28 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-[#486DAA] hover:bg-[#EEF2F8]/30 transition-all">
                     <input type="file" accept=".pdf,.jpg,.jpeg,.png" className="hidden" onChange={handleFile('stsFile')} />
                     {form.stsFile ? (
                       <div className="text-center p-3">
@@ -222,7 +222,7 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                   type="tel"
                   value={form.phone}
                   onChange={(e) => updateForm('phone', e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                   placeholder="+7 (999) 000-00-00"
                 />
               </div>
@@ -232,13 +232,13 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                   type="email"
                   value={form.email}
                   onChange={(e) => updateForm('email', e.target.value)}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB] focus:border-transparent transition-all"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#486DAA] focus:border-transparent transition-all"
                   placeholder="mail@example.com"
                 />
               </div>
-              <div className="bg-[#E8F0FE] rounded-xl p-4 flex items-start gap-3">
-                <Icon name="Info" size={16} className="text-[#0047AB] flex-shrink-0 mt-0.5" />
-                <p className="text-[#0047AB] text-sm">
+              <div className="bg-[#EEF2F8] rounded-xl p-4 flex items-start gap-3">
+                <Icon name="Info" size={16} className="text-[#486DAA] flex-shrink-0 mt-0.5" />
+                <p className="text-[#486DAA] text-sm">
                   Пароль от личного кабинета будет автоматически отправлен на указанный email после оплаты.
                 </p>
               </div>
@@ -298,12 +298,12 @@ export default function ComplaintPage({ onNavigate }: { onNavigate: (page: strin
                 </div>
                 <div className="flex items-center justify-between font-montserrat font-bold text-lg mb-6">
                   <span className="text-[#1A1F36]">Итого</span>
-                  <span className="text-[#0047AB]">3 000 ₽</span>
+                  <span className="text-[#486DAA]">3 000 ₽</span>
                 </div>
 
-                <div className="bg-[#E8F0FE] rounded-xl p-4 flex items-center gap-3 mb-6">
-                  <Icon name="Shield" size={18} className="text-[#0047AB] flex-shrink-0" />
-                  <p className="text-[#0047AB] text-sm">Безопасная оплата через ЮMoney. Данные карты не хранятся.</p>
+                <div className="bg-[#EEF2F8] rounded-xl p-4 flex items-center gap-3 mb-6">
+                  <Icon name="Shield" size={18} className="text-[#486DAA] flex-shrink-0" />
+                  <p className="text-[#486DAA] text-sm">Безопасная оплата через ЮMoney. Данные карты не хранятся.</p>
                 </div>
 
                 <button

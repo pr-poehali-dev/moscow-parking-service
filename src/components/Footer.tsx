@@ -9,7 +9,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#0047AB] rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#486DAA] rounded-lg flex items-center justify-center">
                 <span className="text-white font-montserrat font-black text-sm">М</span>
               </div>
               <div>

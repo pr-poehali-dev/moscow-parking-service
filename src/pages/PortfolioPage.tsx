@@ -105,7 +105,7 @@ export default function PortfolioPage() {
               onClick={() => setFilter(f.id as typeof filter)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 filter === f.id
-                  ? 'bg-[#0047AB] text-white shadow-md'
+                  ? 'bg-[#486DAA] text-white shadow-md'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover cursor-pointer group"
               onClick={() => setSelected(c)}
             >
-              <div className="bg-gradient-to-r from-[#0047AB] to-[#1565C0] p-5">
+              <div className="bg-gradient-to-r from-[#486DAA] to-[#5a7fba] p-5">
                 <div className="flex items-start justify-between mb-3">
                   <span className={`text-xs px-3 py-1 rounded-full font-medium ${
                     c.category === 'parking'
@@ -153,9 +153,9 @@ export default function PortfolioPage() {
                       {c.duration}
                     </div>
                   </div>
-                  <div className="font-montserrat font-bold text-[#0047AB]">{c.amount}</div>
+                  <div className="font-montserrat font-bold text-[#486DAA]">{c.amount}</div>
                 </div>
-                <button className="mt-4 w-full flex items-center justify-center gap-2 text-[#0047AB] text-sm font-medium group-hover:underline">
+                <button className="mt-4 w-full flex items-center justify-center gap-2 text-[#486DAA] text-sm font-medium group-hover:underline">
                   Читать подробнее
                   <Icon name="ArrowRight" size={16} />
                 </button>
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
             className="bg-white rounded-3xl max-w-lg w-full shadow-2xl animate-fade-in overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-gradient-to-r from-[#0047AB] to-[#1565C0] p-6">
+            <div className="bg-gradient-to-r from-[#486DAA] to-[#5a7fba] p-6">
               <div className="flex items-start justify-between mb-4">
                 <span className="bg-green-400 text-green-900 text-xs px-3 py-1 rounded-full font-semibold">
                   ✓ {selected.result}
@@ -194,15 +194,15 @@ export default function PortfolioPage() {
                   { label: 'Срок решения', value: selected.duration, icon: 'Clock' },
                   { label: 'Дата', value: selected.date, icon: 'Calendar' },
                 ].map((item) => (
-                  <div key={item.label} className="bg-[#E8F0FE] rounded-xl p-3 text-center">
-                    <Icon name={item.icon} size={18} className="text-[#0047AB] mx-auto mb-1" />
-                    <div className="font-montserrat font-bold text-[#0047AB] text-sm">{item.value}</div>
+                  <div key={item.label} className="bg-[#EEF2F8] rounded-xl p-3 text-center">
+                    <Icon name={item.icon} size={18} className="text-[#486DAA] mx-auto mb-1" />
+                    <div className="font-montserrat font-bold text-[#486DAA] text-sm">{item.value}</div>
                     <div className="text-gray-500 text-xs">{item.label}</div>
                   </div>
                 ))}
               </div>
               <div className="bg-gray-50 rounded-xl p-4 flex items-start gap-3">
-                <Icon name="Scale" size={18} className="text-[#0047AB] flex-shrink-0 mt-0.5" />
+                <Icon name="Scale" size={18} className="text-[#486DAA] flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Правовое основание</div>
                   <div className="font-medium text-[#1A1F36] text-sm">{selected.law}</div>
