@@ -1,17 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import HomePage from './HomePage';
+import PortfolioPage from './PortfolioPage';
+import DocumentsPage from './DocumentsPage';
+import FaqPage from './FaqPage';
+import ContactsPage from './ContactsPage';
+import ComplaintPage from './ComplaintPage';
+import CabinetPage from './CabinetPage';
 
-const Index = () => {
+type Page = 'home' | 'portfolio' | 'documents' | 'faq' | 'contacts' | 'complaint' | 'cabinet';
+
+const noFooterPages: Page[] = ['complaint', 'cabinet'];
+
+export default function Index() {
+  const [page, setPage] = useState<Page>('home');
+
+  const navigate = (p: string) => {
+    setPage(p as Page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
-      <span className="absolute bottom-8 left-1/2 -translate-x-1/2 inline-block bg-[#FF6637] text-white text-sm px-4 py-2 rounded-full whitespace-nowrap">
-        Подождите 5 минут, Юра создает первую версию проекта с нуля
-      </span>
+    <div className="min-h-screen flex flex-col bg-white font-golos">
+      <Navbar currentPage={page} onNavigate={navigate} />
+      <main className="flex-1">
+        {page === 'home' && <HomePage onNavigate={navigate} />}
+        {page === 'portfolio' && <PortfolioPage />}
+        {page === 'documents' && <DocumentsPage />}
+        {page === 'faq' && <FaqPage onNavigate={navigate} />}
+        {page === 'contacts' && <ContactsPage onNavigate={navigate} />}
+        {page === 'complaint' && <ComplaintPage onNavigate={navigate} />}
+        {page === 'cabinet' && <CabinetPage onNavigate={navigate} />}
+      </main>
+      {!noFooterPages.includes(page) && <Footer onNavigate={navigate} />}
     </div>
   );
-};
-
-export default Index;
+}
